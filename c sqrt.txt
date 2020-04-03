@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int c=0,N,k,m,n,t,r,j;
+    scanf("%d",&N);
+    int M=N;
+    for(;M!=0;M/=10)
+        c++;
+    int A[c/2+1];
+    for(int i=c/2;i>=0;i--)
+    {
+        A[i]=N%100;
+        N/=100;
+    }
+    k=(int)sqrt(A[0]);
+    m=A[0]-k;t=k+k;
+    for(int i=1;i<=c/2;i++)
+    {
+        n=A[i]+100*m;
+        for(j=0;j<=9;j++)
+        {
+            r=t*10+j;
+            if(r*j>n)
+                break;
+        }
+        j--;
+        r--;
+        m=n-(r*j);
+        t=r+j;
+        k=k*10+j;
+        
+    }
+    printf("\nsquare root is : %d",k);
+    return 0;
+}

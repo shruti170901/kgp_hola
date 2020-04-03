@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+void main()
+{
+    int m,n,o;
+    printf("enter m, n ,o \n");
+    scanf("%d%d%d",&m,&n,&o);
+    int a[m][n];
+    int b[n][o];
+    int c[m][o];
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<o;j++)
+        {
+            c[i][j]=0;
+        }
+    }
+    
+    printf("\nenter elements of a[m][n]\n");
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    printf("\nenter elements of b[n][o]\n");
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<o;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    for(int M=0;M<m;M++)
+    {
+        for(int O=0;O<o;O++)
+        {
+            for(int N=0;N<n;N++)
+            {
+                c[M][O]+=a[M][N]*b[N][O];
+            }
+        }
+    }
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<o;j++)
+        {
+            printf("%d\t",c[i][j]);
+        }
+        printf("\n");
+    }
+}
