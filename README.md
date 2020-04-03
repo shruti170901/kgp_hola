@@ -1,2 +1,2 @@
 # kgp_hola
-For first year kgpians
+Just for the sake of its existence
