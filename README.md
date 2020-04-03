@@ -1,2 +1,2 @@
 # kgp_hola
-Just for the sake of its existence
+A repository for all first years at KGP aiming for a high CGPA
